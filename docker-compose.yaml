@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       - APP_NAME=MyFlaskApp
-    #network_mode: 'host'
+    command: uvicorn run:fastapi_app --host 0.0.0.0 --port 8080 --reload
     ports:
       - 8080:8080/tcp
     volumes:
