@@ -1,8 +1,8 @@
 version: '3.8'
 services:
-  flask-container:
-    build: ./flask
-    container_name: flask-container
+  fastapi-container:
+    build: ./fastapi
+    container_name: fastapi-container
     restart: always
     environment:
       - APP_NAME=MyFlaskApp
@@ -10,7 +10,7 @@ services:
     ports:
       - 8080:8080/tcp
     volumes:
-      - ./flask:/usr/src/app
+      - ./fastapi:/usr/src/app
 
   postgresql-container:
     image: postgres:14
@@ -19,10 +19,14 @@ services:
     environment:
       - POSTGRES_USER=test
       - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=shop
+      - TZ=GMT+8
+      - PGTZ=GMT+8
     ports:
       - '5433:5432'
     volumes:
       - postgresql_vol:/var/lib/postgresql/data
+      - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
 
 volumes:
   postgresql_vol:
