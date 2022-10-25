@@ -1,0 +1,26 @@
+{
+  "order": {
+    "customer_name": "George",
+    "customer_id": "A01"
+  },
+  "order_items": [
+    {
+      "product_name": "beer",
+      "amount": 6,
+      "product_id": "025",
+      "price": 98
+    },
+    {
+      "product_name": "potato chips",
+      "amount": 2,
+      "product_id": "044",
+      "price": 60
+    },
+    {
+      "product_name": "BBQ set",
+      "amount": 1,
+      "product_id": "072",
+      "price": 399
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "order": {
+    "order_id": 1,
+    "customer_name": "George Martin"
+  },
+  "order_items": [
+    {
+      "id": "1",
+      "amount": "12",
+      "price": "196"
+    },
+    {
+      "id": 2,
+      "amount": "1",
+      "price": "30"
+    }
+  ]
+}
